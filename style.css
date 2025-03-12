@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+:root {
+  --Neutral-0: hsl(0, 0%, 100%);
+  --Neutral-300: hsl(252, 6%, 83%);
+  --Neutral-500: hsl(245, 15%, 58%);
+  --Neutral-700: hsl(245, 19%, 35%);
+  --Neutral-900: hsl(248, 70%, 10%);
+  --Orange-500: hsl(7, 88%, 67%);
+  --Orange-700: hsl(7, 71%, 60%);
+  --Gradient-text: hsl(7, 86%, 67%);
+  --White: hsl(0, 0%, 100%);
+  --font-Inconsolata: 'Inconsolata', monospace;
+}
+
+
+.ticket-ctn {
+    display: none;
+}
+
+
+
+body {
+    color: var(--White);
+    background-image: url("./assets/images/background-mobile.png");
+    background-size: cover;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    font-family: var(--font-Inconsolata);
+    
+}
+
+.container {
+    width: 375px;
+    height: 100vh;
+    border: 1px solid #000;
+    margin: 30px 16px 0 16px;
+    
+    
+}
+.title-ctn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.9em;
+    gap: 1.5rem;
+    text-align: center;
+    padding: 10px;
+}
+.title-img {
+    width: 50%;
+    height: 24px;
+}
+.title {
+    font-size: 1.85em;
+    font-weight: 700;
+}
+.title-paragraph {
+    font-size: 1.3em;
+    color: var(--Neutral-300);
+}
