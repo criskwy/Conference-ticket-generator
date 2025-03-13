@@ -29,26 +29,88 @@
     <!-- Form starts -->
     <main class="container">
       <div class="title-ctn">
-        <img class="title-img" src="./assets/images/logo-full.svg" alt="logo coding conf" />
+        <img
+          class="title-img"
+          src="./assets/images/logo-full.svg"
+          alt="logo coding conf"
+        />
 
         <p class="title">Your Journey to Coding Conf 2025 Starts Here!</p>
-        <p class="title-paragraph">Secure your spot at next year's biggest coding conference.</p>
+        <p class="title-paragraph">
+          Secure your spot at next year's biggest coding conference.
+        </p>
       </div>
 
-      <form action="form-ctn">
-        <label for="upload-img">Upload Avatar</label>
+      <form action="" class="form-ctn">
+        <label for="">Upload Avatar</label>
         <div class="upload-ctn">
-          <img src="./assets/images/icon-upload.svg" alt="upload logo" />
+          <img
+            class="upload-icon"
+            src="./assets/images/icon-upload.svg"
+            alt="upload logo"
+          />
           <p>Drag and drop or click to upload</p>
         </div>
-        <img src="./assets/images/icon-info.svg" alt="info logo" />
-        <p>Upload your photo (JPG or PNG, max size: 500KB).</p>
+        <div class="advertising-upload">
+          <img
+            class="info-icon"
+            src="./assets/images/icon-info.svg"
+            alt="info logo"
+          />
+          <p>Upload your photo (JPG or PNG, max size: 500KB).</p>
+         
+        </div>
+        <span class="error-upload-msg"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="none"
+              viewBox="0 0 16 16"
+            >
+              <path
+                stroke="hsl(7, 88%, 67%)"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M2 8a6 6 0 1 0 12 0A6 6 0 0 0 2 8Z"
+              />
+              <path fill="#D1D0D5" d="M8.004 10.462V7.596ZM8 5.57v-.042Z" />
+              <path
+                stroke="hsl(7, 88%, 67%)"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M8.004 10.462V7.596M8 5.569v-.042"
+              /></svg>
+            File too large. Please upload a photo under 500kb.</span
+          >
 
         <label for="full-name">Full Name</label>
         <input type="text" />
         <label for="email">Email Address</label>
         <input type="email" placeholder="example@email.com" />
-
+        <span class="error-email-msg"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="none"
+            viewBox="0 0 16 16"
+          >
+            <path
+              stroke="hsl(7, 88%, 67%)"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M2 8a6 6 0 1 0 12 0A6 6 0 0 0 2 8Z"
+            />
+            <path fill="#D1D0D5" d="M8.004 10.462V7.596ZM8 5.57v-.042Z" />
+            <path
+              stroke="hsl(7, 88%, 67%)"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M8.004 10.462V7.596M8 5.569v-.042"
+            /></svg
+          >Please enter a valid email address.</span
+        >
         <label for="gitHub-userName">GitHub Username</label>
         <input type="text" placeholder="@yourusername" />
 
@@ -68,7 +130,6 @@
 
       <!-- Generated tickets ends -->
     </section>
-
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
