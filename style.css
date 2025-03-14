@@ -22,20 +22,13 @@
   --font-Inconsolata: 'Inconsolata', monospace;
 }
 
-
-.ticket-ctn {
-    display: none;
-}
-
-
-
 body {
     color: var(--White);
     background-image: url("./assets/images/background-mobile.png");
     background-size: cover;
     height: 100vh;
     font-family: var(--font-Inconsolata);
-   display: grid;
+    display: grid;
     place-items: center;
     
 }
@@ -45,8 +38,7 @@ body {
     margin: 30px 16px 0 16px;
     display: flex;
     flex-direction: column;
-
-           
+         
 }
 .title-ctn {
     display: flex;
@@ -84,6 +76,46 @@ body {
 label {
     font-size: 1.25em;
 }
+
+/*upload container*/
+.upload-ctn {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    background-color: var(--Neutral-700-trans);
+    font-weight: 300;
+    font-size: 1em;
+    border-radius: 15px;
+    padding: 22px;
+    border: 2px dashed var(--Neutral-300);
+    transition: border-color 0.3s ease-in-out;
+}
+
+.upload-ctn:active {
+    box-shadow: 0 0 0 3px var(--Neutral-900), 0 0 0 5px var(--Neutral-300-trans);
+}
+.upload-ctn:hover {
+    cursor: pointer;
+   
+    background-color: var(--Neutral-300-trans);
+   
+}
+.upload-icon {
+   background-color: var(--Neutral-300-trans-2);
+   border: 1px solid var(--Neutral-300-trans);
+   border-radius: 8px;
+   padding: 8px;
+}
+.advertising-upload {
+    display: flex;
+    font-size: 0.8em;
+    align-items: center;
+    gap: 8px;
+    font-weight: 200;
+}
+
 input {
     background-color: var(--Neutral-700-trans);
     border: 1px solid var(--Neutral-300-trans);
@@ -130,48 +162,7 @@ input:invalid + .error-email-msg {
     display: flex;
     
 }
- 
-       
-
-/*upload container*/
-.upload-ctn {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-    background-color: var(--Neutral-700-trans);
-    font-weight: 300;
-    font-size: 1em;
-    border-radius: 15px;
-    padding: 22px;
-    border: 2px dashed var(--Neutral-300);
-    transition: border-color 0.3s ease-in-out;
-}
-
-.upload-ctn:active {
-    box-shadow: 0 0 0 3px var(--Neutral-900), 0 0 0 5px var(--Neutral-300-trans);
-}
-.upload-ctn:hover {
-    cursor: pointer;
-   
-    background-color: var(--Neutral-300-trans);
-   
-}
-.upload-icon {
-   background-color: var(--Neutral-300-trans-2);
-   border: 1px solid var(--Neutral-300-trans);
-   border-radius: 8px;
-   padding: 8px;
-}
-.advertising-upload {
-    display: flex;
-    font-size: 0.8em;
-    align-items: center;
-    gap: 8px;
-    font-weight: 200;
-}
-
+        
 /* upload container error state*/
 .error-upload-msg {
     display: flex;
@@ -181,7 +172,6 @@ input:invalid + .error-email-msg {
     font-weight: 300;
     color: var(--Orange-500);
 }
-
 
 .btn-generate {
     padding: 16px;
@@ -206,4 +196,47 @@ input:invalid + .error-email-msg {
     cursor: pointer;
     background-color: var(--Orange-700);
     box-shadow: 0 0 0 3px var(--Neutral-900), 0 0 0 4px var(--Neutral-0);
+}
+
+/* ticket generator */
+
+
+.container {
+    display: display;
+}
+
+.ticket-ctn {
+    display: flex;
+    flex-direction: column;
+    width: 375px;
+    
+}
+
+.ticket {
+    background-image: url("./assets/images/pattern-ticket.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 160px;
+    padding: 20px 15px;
+    
+
+}
+
+.ticket-logo-ctn {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.ticket-logo {
+    width: 30px;
+    height: 30px;
+}
+.ticket-date {
+    font-size: 0.8em;
+    color: var(--Neutral-300);
+    margin-left: 40px;
 }
