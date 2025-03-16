@@ -202,7 +202,7 @@ input:invalid + .error-email-msg {
 
 
 .container {
-    display: display;
+    display: none;
 }
 
 .ticket-ctn {
@@ -239,4 +239,15 @@ input:invalid + .error-email-msg {
     font-size: 0.8em;
     color: var(--Neutral-300);
     margin-left: 40px;
+}
+
+.ticket-avatar-img {
+    width: 45px;
+    
+    border-radius: 16px;
+    padding: 10px 0;
+}
+
+.ticket-info-ctn {
+    display: flex;
 }
