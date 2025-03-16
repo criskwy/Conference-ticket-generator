@@ -30,6 +30,7 @@ body {
     font-family: var(--font-Inconsolata);
     display: grid;
     place-items: center;
+
     
 }
 
@@ -38,6 +39,7 @@ body {
     margin: 30px 16px 0 16px;
     display: flex;
     flex-direction: column;
+  
          
 }
 .title-ctn {
@@ -219,35 +221,61 @@ input:invalid + .error-email-msg {
     width: 100%;
     height: 160px;
     padding: 20px 15px;
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
 }
 
 .ticket-logo-ctn {
     display: flex;
-    align-items: flex-start;
     gap: 10px;
-    font-size: 1.5em;
-    font-weight: 700;
+    
+    
     margin-bottom: 5px;
 }
 .ticket-logo {
     width: 30px;
     height: 30px;
 }
-.ticket-date {
-    font-size: 0.8em;
+.ticket-title {
+    font-size: 1.35em;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+.ticket-date, .email-avatar {
+    font-size: 0.9em;
     color: var(--Neutral-300);
-    margin-left: 40px;
+    
 }
 
 .ticket-avatar-img {
     width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    margin-right: 12px;
     
-    border-radius: 16px;
-    padding: 10px 0;
+    
+}
+.ticket-avatar-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.avatar-name {
+    font-size: 1.155em;
+    font-weight: 600;
 }
 
 .ticket-info-ctn {
     display: flex;
+}
+
+.ticket-info-email-avatar-ctn {
+    display: flex;
+    align-items: center;
+}
+.ticket-avatar-github {
+    width: 16px;
+    height: 16px;
 }
