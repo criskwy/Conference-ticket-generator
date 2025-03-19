@@ -26,15 +26,15 @@ body {
     color: var(--White);
     background-image: url("./assets/images/pattern-lines.svg"), url("./assets/images/background-mobile.png");
     background-repeat: no-repeat, no-repeat;
-    background-attachment: fixed, fixed;
+    background-attachment: scroll, fixed;
     background-position: center, center;
-    background-size: cover, cover;
+    background-size:  cover, cover;
     height: 100vh;
     font-family: var(--font-Inconsolata);
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+
 }
 
 .container, .ticket-ctn {
@@ -57,23 +57,35 @@ body {
     gap: 1.5rem;
     text-align: center;
     padding: 10px;
+    margin-bottom: 65px;
 }
+
+
 .title-img {
     width: 50%;
     height: 24px;
     margin-bottom: 12px;
 }
 .title {
-    font-size: 1.85em;
+    font-size: 2.05em;
     font-weight: 700;
+}
+.title > span {
+    background: linear-gradient(45deg, var(--Orange-700), var(--White));
+    background-clip: text;
+    color: transparent;
 }
 .title-paragraph {
     font-size: 1.3em;
     color: var(--Neutral-300);
+    line-height: 130%;
+}
+.title-paragraph > span {
+    color: var(--Orange-500);
+    font-size: 1em;
 }
 
-
-/* form container */
+/*-----form container-----*/
 
 .form-ctn{
     display: flex;
@@ -107,9 +119,7 @@ label {
 }
 .upload-ctn:hover {
     cursor: pointer;
-   
     background-color: var(--Neutral-300-trans);
-   
 }
 .upload-icon {
    background-color: var(--Neutral-300-trans-2);
@@ -124,7 +134,6 @@ label {
     gap: 8px;
     font-weight: 200;
 }
-
 input {
     background-color: var(--Neutral-700-trans);
     border: 1px solid var(--Neutral-300-trans);
@@ -135,30 +144,24 @@ input {
     font-size: 1.2em;
     color: var(--Neutral-0);
     padding: 20px;
-  
-  
 }
 input::placeholder {
     color: var(--Neutral-300);
-         
 }   
 input:hover {
     cursor: pointer;
     background-color: var(--Neutral-300-trans);
-    
 }
 input:focus {
     box-shadow: 0 0 0 3px var(--Neutral-900), 0 0 0 5px var(--Neutral-300-trans);
 }
 
-/* input state error */
-
+/* ------input state error------ */
 
 input:invalid {
     border: 1px solid var(--Orange-500);
     stroke: var(--Orange-500);
   }
-
   .error-email-msg{
     display: none;
     font-size: 0.8em;
@@ -171,8 +174,7 @@ input:invalid + .error-email-msg {
     display: flex;
     
 }
-        
-/* upload container error state*/
+/* -----upload container error state-----*/
 .error-upload-msg {
     display: flex;
     font-size: 0.8em;
@@ -181,7 +183,6 @@ input:invalid + .error-email-msg {
     font-weight: 300;
     color: var(--Orange-500);
 }
-
 .btn-generate {
     padding: 16px;
     border-radius: 10px;
@@ -193,32 +194,26 @@ input:invalid + .error-email-msg {
     color: var(--Neutral-900);
     margin-top: 10px;
     margin-bottom: 100px;
-    
 }
 .btn-generate:hover {
     cursor: pointer;
     background-color: var(--Orange-700);
     box-shadow: 0 3px 0 0 var(--Orange-500);
 }
-
 .btn-generate:focus {
     cursor: pointer;
     background-color: var(--Orange-700);
     box-shadow: 0 0 0 3px var(--Neutral-900), 0 0 0 4px var(--Neutral-0);
 }
-
-/* ticket generator */
-
+/* -----ticket generator----- */
 
 .container {
-    display: none;
+    display: flex;
 }
-
 .ticket-ctn {
-    
+    display: none;
     height: 100%;
 }
-
 .ticket {
     background-image: url("./assets/images/pattern-ticket.svg");
     background-repeat: no-repeat;
@@ -227,17 +222,15 @@ input:invalid + .error-email-msg {
     width: 100%;
     height: 160px;
     padding: 20px 32px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    
-    
+    display: grid;
+    grid-template-columns: 262px auto;
+    grid-template-rows: 1fr 1fr;
 }
-
 .ticket-logo-ctn {
     display: flex;
     gap: 10px;
     margin-bottom: 5px;
+    grid-column: 1 / 1;
 }
 .ticket-logo {
     width: 30px;
@@ -251,16 +244,12 @@ input:invalid + .error-email-msg {
 .ticket-date, .email-avatar {
     font-size: 0.9em;
     color: var(--Neutral-300);
-    
 }
-
 .ticket-avatar-img {
     width: 45px;
     height: 45px;
     border-radius: 10px;
     margin-right: 12px;
-    
-    
 }
 .ticket-avatar-data {
     display: flex;
@@ -271,11 +260,12 @@ input:invalid + .error-email-msg {
     font-size: 1.155em;
     font-weight: 600;
 }
-
 .ticket-info-ctn {
     display: flex;
+    grid-column: 1 / 1;
+    grid-row: 2 / 2;
+    align-self: flex-end;
 }
-
 .ticket-info-email-avatar-ctn {
     display: flex;
     align-items: center;
@@ -283,4 +273,21 @@ input:invalid + .error-email-msg {
 .ticket-avatar-github {
     width: 16px;
     height: 16px;
+}
+.ticket-num {
+    rotate: 90deg;
+    grid-column: 2 / 2;
+    grid-row: 1 / 3;
+    place-self: center;
+    font-size: 1.4em;
+    color: var(--Neutral-300-trans);
+}
+
+@media screen and (min-width: 380px) {
+    body {
+        background-image: url("./assets/images/background-tablet.png");
+        background-attachment: fixed;
+        
+    }
+
 }
