@@ -39,7 +39,7 @@ body {
 
 }
 
-.container, .ticket-ctn {
+.container {
     width: 375px;
     margin: 10px 16px 0 16px;
     display: flex;
@@ -66,7 +66,7 @@ body {
     margin-bottom: 12px;
 }
 .title {
-    font-size: clamp(24px, 5vw, 50px);
+    font-size: clamp(28px, 5vw, 50px);
     font-weight: 700;
 }
 .title > span {
@@ -209,46 +209,57 @@ input:invalid + .error-email-msg {
 /* -----ticket generator----- */
 
 .container {
-    display: none;
+    display: flex;
 }
 .ticket-ctn {
-    display: flex;
+    display: none;
+    width: 100%;
+    height: 100%;
+    max-width: 530px;
+    margin: 10px 16px 0 16px;
+    flex-direction: column;
     
+         
 }
 .ticket {
     background-image: url("./assets/images/pattern-ticket.svg");
     background-repeat: no-repeat;
     background-size: contain;
+    background-attachment: scroll;
     background-position: center;
-    width: 100%;
-    height: 160px;
+    aspect-ratio: 16/ 9;  
     padding: 20px 32px;
     display: grid;
-    grid-template-columns: 262px auto;
+    grid-template-columns: 88% 22%;
     grid-template-rows: 1fr 1fr;
+    margin: 10px;
+    position: relative;
 }
 .ticket-logo-ctn {
     display: flex;
     gap: 10px;
     margin-bottom: 5px;
     grid-column: 1 / 1;
+    align-items: center;
 }
 .ticket-logo {
-    width: 30px;
-    height: 30px;
+    width: 13%;
+    margin-bottom: 3%;
+    
+    
 }
 .ticket-title {
-    font-size: 1.35em;
+    font-size: clamp(23px, 5vw, 33px);
     font-weight: 700;
     margin-bottom: 12px;
 }
 .ticket-date, .email-avatar {
-    font-size: 0.9em;
+    font-size: clamp(12px, 4vw, 18px);
     color: var(--Neutral-300);
 }
 .ticket-avatar-img {
-    width: 45px;
-    height: 45px;
+    width: 20%;
+   
     border-radius: 10px;
     margin-right: 12px;
 }
@@ -258,14 +269,14 @@ input:invalid + .error-email-msg {
     justify-content: space-around;
 }
 .avatar-name {
-    font-size: 1.155em;
+    font-size: clamp(12px, 5vw, 32px);
     font-weight: 600;
 }
 .ticket-info-ctn {
     display: flex;
     grid-column: 1 / 1;
     grid-row: 2 / 2;
-    align-self: flex-end;
+    align-self: center;
 }
 .ticket-info-email-avatar-ctn {
     display: flex;
@@ -280,7 +291,7 @@ input:invalid + .error-email-msg {
     grid-column: 2 / 2;
     grid-row: 1 / 3;
     place-self: center;
-    font-size: 1.4em;
+    font-size: clamp( 24px, 7vw, 36px);
     color: var(--Neutral-300-trans);
 }
 /**---------------media queries-------------**/
@@ -300,18 +311,11 @@ input:invalid + .error-email-msg {
     .container {
         width: 460px;
         margin: 10px 16px 0 16px;
-        display: none;
+        display: flex;
         flex-direction: column;
                      
     }
-    .ticket-ctn {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        
-        
-    }
+  
 
 }
 
@@ -330,20 +334,17 @@ input:invalid + .error-email-msg {
     .container {
         width: 900px;
         margin: 10px 16px 0 16px;
-        display: none;
+        display: flex;
         align-items: center;
         
                      
     }
 
     .ticket-ctn {
-        display: flex;
+        display: none;
     
     }
-    .title-ctn {
-        width: 760px;
-        
-    }
+ 
     .form-ctn {
         width: 460px;
                 
