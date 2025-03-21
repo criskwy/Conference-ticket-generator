@@ -27,10 +27,10 @@ body {
     color: var(--White);
     background-image: url("./assets/images/pattern-circle.svg"), url("./assets/images/pattern-squiggly-line-top.svg"), url("./assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg"), url("./assets/images/pattern-lines.svg"), url("./assets/images/background-mobile.png");
     background-repeat:no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
-    background-attachment:scroll, scroll, scroll, fixed, fixed;
+    background-attachment:scroll, scroll, fixed, fixed, fixed;
     background-position:400px 480px, right 10px, left bottom, top right, center;
     background-size: 40% auto, 30% auto, 80% auto, auto 87%, cover;
-    height: 100%;
+    height: 100vh;
     font-family: var(--font-Inconsolata);
     display: flex;
     flex-direction: column;
@@ -213,7 +213,7 @@ input:invalid + .error-email-msg {
 }
 .ticket-ctn {
     display: flex;
-    height: 100%;
+    
 }
 .ticket {
     background-image: url("./assets/images/pattern-ticket.svg");
@@ -283,13 +283,13 @@ input:invalid + .error-email-msg {
     font-size: 1.4em;
     color: var(--Neutral-300-trans);
 }
-
+/**---------------media queries-------------**/
 @media screen and (min-width: 560px) {
     body {
         color: var(--White);
         background-image: url("./assets/images/pattern-circle.svg"), url("./assets/images/pattern-squiggly-line-top.svg"), url("./assets/images/pattern-squiggly-line-bottom-desktop.svg"), url("./assets/images/pattern-lines.svg"), url("./assets/images/background-tablet.png");
         background-repeat:no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
-        background-attachment:scroll, scroll, scroll, fixed, fixed;
+        background-attachment:scroll, scroll, fixed, fixed, fixed;
         background-position:700px 480px, right 10px, left bottom, top right, center;
         background-size: auto auto, 50% auto, 65% auto, auto 87%, cover;
        
@@ -310,6 +310,7 @@ input:invalid + .error-email-msg {
         align-items: center;
         gap: 20px;
         
+        
     }
 
 }
@@ -319,7 +320,7 @@ input:invalid + .error-email-msg {
         color: var(--White);
         background-image: url("./assets/images/pattern-circle.svg"), url("./assets/images/pattern-squiggly-line-top.svg"), url("./assets/images/pattern-squiggly-line-bottom-desktop.svg"), url("./assets/images/pattern-lines.svg"), url("./assets/images/background-desktop.png");
         background-repeat:no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
-        background-attachment:scroll, scroll, scroll, fixed, fixed;
+        background-attachment:scroll, scroll, fixed, fixed, fixed;
         background-position:700px 480px, right 10px, left bottom, top right, center;
         background-size: auto auto, 50% auto, 65% auto, auto 87%, cover;
                  
@@ -329,10 +330,15 @@ input:invalid + .error-email-msg {
     .container {
         width: 900px;
         margin: 10px 16px 0 16px;
-        display: flex;
-        flex-direction: column;
+        display: none;
         align-items: center;
+        
                      
+    }
+
+    .ticket-ctn {
+        display: flex;
+    
     }
     .title-ctn {
         width: 760px;
@@ -340,7 +346,7 @@ input:invalid + .error-email-msg {
     }
     .form-ctn {
         width: 460px;
-        
+                
     }
     .title {
         font-weight: 900;
