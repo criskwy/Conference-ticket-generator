@@ -128,6 +128,15 @@ label {
    border-radius: 8px;
    padding: 8px;
 }
+.img-preview {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    border: 1px solid forestgreen;
+    display: flex;
+    overflow: hidden;
+}
+
 .advertising-upload {
     display: flex;
     font-size: 0.8em;
@@ -135,6 +144,16 @@ label {
     gap: 8px;
     font-weight: 200;
 }
+#upload-img {
+    display: none;
+}
+.upload-icon.active{
+    display: none;
+}
+.img-preview.active {
+    display:flex;
+}
+
 input {
     background-color: var(--Neutral-700-trans);
     border: 1px solid var(--Neutral-300-trans);
