@@ -35,17 +35,17 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-       
+     
 
 }
 
 .container {
     width: 375px;
+   
     margin: 10px 16px 0 16px;
     display: flex;
     flex-direction: column;
-    
-         
+            
 }
 .title-ctn {
     display: flex;
@@ -118,8 +118,9 @@ label {
     cursor: pointer;
     background-color: var(--Neutral-300-trans);
 }
-.upload-ctn:active {
+.upload-ctn.active {
     box-shadow: 0 0 0 3px var(--Neutral-900), 0 0 0 5px var(--Neutral-300-trans);
+    background-color: var(--Neutral-300-trans);
 }
 .upload-icon {
    background-color: var(--Neutral-300-trans-2);
@@ -208,12 +209,11 @@ input:invalid + .error-email-msg {
 }
 /* -----ticket generator----- */
 
-.container {
-    display: flex;
-}
+
 .ticket-ctn {
     display: none;
     width: 100%;
+    min-width: 375px;
     height: 100%;
     max-width: 530px;
     margin: 10px 16px 0 16px;
@@ -254,7 +254,7 @@ input:invalid + .error-email-msg {
     margin-bottom: 12px;
 }
 .ticket-date, .email-avatar {
-    font-size: clamp(12px, 4vw, 18px);
+    font-size: clamp(15px, 4vw, 18px);
     color: var(--Neutral-300);
 }
 .ticket-avatar-img {
@@ -269,7 +269,7 @@ input:invalid + .error-email-msg {
     justify-content: space-around;
 }
 .avatar-name {
-    font-size: clamp(12px, 5vw, 32px);
+    font-size: clamp(18px, 5vw, 32px);
     font-weight: 600;
 }
 .ticket-info-ctn {
@@ -294,6 +294,16 @@ input:invalid + .error-email-msg {
     font-size: clamp( 24px, 7vw, 36px);
     color: var(--Neutral-300-trans);
 }
+
+/**---------------change view ticket-------------**/
+.container.change {
+    display: none;
+}
+.ticket-ctn.change {
+    display: flex;
+}
+
+
 /**---------------media queries-------------**/
 @media screen and (min-width: 560px) {
     body {
@@ -311,9 +321,14 @@ input:invalid + .error-email-msg {
     .container {
         width: 460px;
         margin: 10px 16px 0 16px;
-        display: flex;
         flex-direction: column;
                      
+    }
+    .container.change {
+        display: none;
+    }
+    .ticket.change {
+        display: flex;
     }
   
 
@@ -334,22 +349,21 @@ input:invalid + .error-email-msg {
     .container {
         width: 900px;
         margin: 10px 16px 0 16px;
-        display: flex;
-        align-items: center;
-        
+        align-items: center;       
                      
     }
 
-    .ticket-ctn {
-        display: none;
-    
-    }
- 
     .form-ctn {
         width: 460px;
                 
     }
     .title {
         font-weight: 900;
+    }
+    .container.change {
+        display: none;
+    }
+    .ticket.change {
+        display: flex;
     }
 }
