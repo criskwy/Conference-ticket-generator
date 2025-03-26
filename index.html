@@ -45,13 +45,18 @@
 
       <form action="" class="form-ctn">
         <label for="">Upload Avatar</label>
-        <div class="upload-ctn" type="file">
+        <div class="drop-area" type="file">
           <img
             class="upload-icon"
             src="./assets/images/icon-upload.svg"
             alt="upload logo"
           />
           <div class="img-preview"></div>
+          <div class="btn-change-img-ctn">
+            <button class="btn-remove-img">Remove Image</button>
+            <button class="btn-change-img">Change image</button>
+          </div>
+
           <p>Drag and drop or click to upload</p>
         </div>
         <div class="advertising-upload">
@@ -61,7 +66,7 @@
             alt="info logo"
           />
           <!-- -- hidden input-- -->
-          <input type="file" name="upload" id="upload-img" accept="image/*">
+          <input type="file" name="upload" id="upload-img" accept="image/*" />
           <p>Upload your photo (JPG or PNG, max size: 500KB).</p>
         </div>
         <span class="error-upload-msg"
@@ -134,7 +139,9 @@
         />
 
         <p class="title">
-          Congrats, <!-- Full Name --><span class="name-avatar"></span>! Your ticket is ready.
+          Congrats,
+          <!-- Full Name --><span class="name-avatar"></span>! Your ticket is
+          ready.
         </p>
         <p class="title-paragraph">
           We've emailed your ticket to <span class="email-avatar"></span>

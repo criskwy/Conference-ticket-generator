@@ -97,8 +97,8 @@ label {
     font-size: 1.25em;
 }
 
-/*upload container*/
-.upload-ctn {
+/*-----drop area-----*/
+.drop-area {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -114,11 +114,11 @@ label {
 }
 
 
-.upload-ctn:hover {
+.drop-area:hover {
     cursor: pointer;
     background-color: var(--Neutral-300-trans);
 }
-.upload-ctn.active {
+.drop-area.active {
     box-shadow: 0 0 0 3px var(--Neutral-900), 0 0 0 5px var(--Neutral-300-trans);
     background-color: var(--Neutral-300-trans);
 }
@@ -132,17 +132,33 @@ label {
     width: 50px;
     height: 50px;
     border-radius: 8px;
-    border: 1px solid forestgreen;
-    display: flex;
+    border: 1px solid  var(--Neutral-300-trans);
+    display: none;
     overflow: hidden;
 }
-
+.btn-change-img-ctn{
+    display: flex;
+    gap: 10px;
+}
+.btn-remove-img, .btn-change-img {
+    border: none;
+    background-color: var(--Neutral-300-trans-2);
+    color: var(--Neutral-300);
+    text-decoration: underline;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
 .advertising-upload {
     display: flex;
     font-size: 0.8em;
     align-items: center;
     gap: 8px;
     font-weight: 200;
+}
+.advertising-upload.hide {
+    display: none;;
 }
 #upload-img {
     display: none;
@@ -197,12 +213,15 @@ input:invalid + .error-email-msg {
 }
 /* -----upload container error state-----*/
 .error-upload-msg {
-    display: flex;
+    display: none;
     font-size: 0.8em;
     align-items: center;
     gap: 8px;
     font-weight: 300;
     color: var(--Orange-500);
+}
+.error-upload-msg.show {
+    display: flex;
 }
 .btn-generate {
     padding: 16px;
