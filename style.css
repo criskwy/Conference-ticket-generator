@@ -65,6 +65,7 @@ body {
     height: 24px;
     margin-bottom: 12px;
 }
+
 .title {
     font-size: clamp(28px, 5vw, 50px);
     font-weight: 700;
@@ -122,6 +123,9 @@ label {
     box-shadow: 0 0 0 3px var(--Neutral-900), 0 0 0 5px var(--Neutral-300-trans);
     background-color: var(--Neutral-300-trans);
 }
+.text-drag-and-drop.hide {
+    display: none;
+}
 .upload-icon {
    background-color: var(--Neutral-300-trans-2);
    border: 1px solid var(--Neutral-300-trans);
@@ -148,7 +152,11 @@ label {
     padding: 5px;
     border-radius: 5px;
     cursor: pointer;
+    display: none;
     
+}
+.btn-remove-img.show, .btn-change-img.show {
+    display: flex;
 }
 .advertising-upload {
     display: flex;
