@@ -74,6 +74,7 @@ body {
     background: linear-gradient(45deg, var(--Orange-700), var(--White));
     background-clip: text;
     color: transparent;
+    text-transform: capitalize;
 }
 .title-paragraph {
     font-size: 1.3em;
@@ -200,6 +201,9 @@ input:hover {
 input:focus {
     box-shadow: 0 0 0 3px var(--Neutral-900), 0 0 0 5px var(--Neutral-300-trans);
 }
+#name {
+    text-transform: capitalize;
+}
 
 /* ------input state error------ */
 
@@ -305,10 +309,12 @@ input:invalid + .error-email-msg {
 }
 .ticket-avatar-img {
     width: 20%;
-   
     border-radius: 10px;
     margin-right: 12px;
 }
+/* .ticket-avatar-img.hide {
+    display: none;
+} */
 .ticket-avatar-data {
     display: flex;
     flex-direction: column;
@@ -317,6 +323,7 @@ input:invalid + .error-email-msg {
 .avatar-name {
     font-size: clamp(18px, 5vw, 32px);
     font-weight: 600;
+    text-transform: capitalize;
 }
 .ticket-info-ctn {
     display: flex;

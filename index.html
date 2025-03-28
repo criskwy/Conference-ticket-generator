@@ -51,7 +51,7 @@
             src="./assets/images/icon-upload.svg"
             alt="upload logo"
           />
-          <div class="img-preview"></div>
+          <div class="img-preview" id="img-preview-id"></div>
           <div class="btn-change-img-ctn">
             <button class="btn-remove-img">Remove Image</button>
             <button class="btn-change-img">Change image</button>
@@ -95,9 +95,9 @@
         >
 
         <label for="full-name">Full Name</label>
-        <input type="text" />
+        <input type="text" id="name" />
         <label for="email">Email Address</label>
-        <input type="email" placeholder="example@email.com" />
+        <input type="email" placeholder="example@email.com" id="email" />
         <span class="error-email-msg"
           ><svg
             xmlns="http://www.w3.org/2000/svg"
@@ -121,7 +121,7 @@
             /></svg>Please enter a valid email address.</span
         >
         <label for="gitHub-userName">GitHub Username</label>
-        <input type="text" placeholder="@yourusername" />
+        <input type="text" placeholder="@yourusername" id="gitHubUser" />
 
         <button class="btn-generate">Generate My Ticket</button>
       </form>
@@ -174,7 +174,7 @@
                 src="./assets/images/icon-github.svg"
                 alt="git-hub icon"
               />
-              <p class="email-avatar">@jonatankristof0101</p>
+              <p class="gitHub-avatar">@jonatankristof0101</p>
             </div>
           </div>
         </div>

@@ -1,5 +1,8 @@
 const nameAvatar = document.querySelector(".name-avatar");
 const emailAvatar = document.querySelector(".email-avatar");
+const GitHubName = document.querySelector(".gitHub-avatar");
+const avatarName = document.querySelector(".avatar-name");
+const avatarImg = document.querySelector(".ticket-avatar-img")
 const dropArea = document.querySelector(".drop-area");
 const changeTicket = document.querySelector(".changeTicket");
 const container = document.querySelector(".container");
@@ -12,11 +15,14 @@ const btnRemoveImg = document.querySelector(".btn-remove-img");
 const advertising = document.querySelector(".advertising-upload");
 const errorUploadMsg = document.querySelector(".error-upload-msg");
 const textDragAndDrop = document.querySelector(".text-drag-and-drop");
+const formCtn = document.querySelector(".form-ctn");
 
 const MAX_FILE_SIZE = 500 * 1024;  // 500 KB en bytes
 
 nameAvatar.textContent = "Jonatan Kristof";
-emailAvatar.textContent = "jonatan@email.com"
+avatarName.textContent = "Jonatan Kristof";
+emailAvatar.textContet = "jonatan@gmail.com";
+GitHubName.textContent = "@jonatankristof0101";
 
 //change view between upload and ticket temporary
 changeTicket.addEventListener("click", () => {
@@ -73,6 +79,7 @@ dropArea.addEventListener("drop", (e) => {
       imgElement.src = reader.result;  // Establecer la imagen cargada en la vista previa
       imgPreview.innerHTML = "";  // Limpiar cualquier contenido previo
       imgPreview.appendChild(imgElement);  // Añadir la imagen a la vista previa
+
     };
 
     reader.readAsDataURL(file);  // Leer la imagen como una URL de datos
@@ -129,6 +136,8 @@ inputUploadImg.addEventListener("change", (e) => {
       imgElement.src = reader.result;  // Establecer la imagen cargada en la vista previa
       imgPreview.innerHTML = "";  // Limpiar cualquier contenido previo
       imgPreview.appendChild(imgElement);  // Añadir la imagen a la vista previa
+
+
     };
 
     reader.readAsDataURL(file);  // Leer la imagen como una URL de datos
@@ -186,4 +195,25 @@ function showPreviewFile(file) {
   reader.readAsDataURL(file);
 }
 
+// data form
 
+formCtn.addEventListener("submit", validateData);
+
+function validateData(e) {
+  e.preventDefault();
+  const name = document.querySelector("#name").value;
+  const email = document.querySelector("#email").value;
+  const userGitHub = document.querySelector("#gitHubUser").value;
+
+  
+ 
+
+  nameAvatar.textContent = name;
+  avatarName.textContent = name;
+  emailAvatar.textContent = email;
+  GitHubName.textContent = userGitHub;
+  avatarImg.src = "";
+  avatarImg.innerHTML = "";
+  
+
+}
